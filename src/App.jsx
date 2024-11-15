@@ -4,11 +4,17 @@ import UserGrid from "./components/UserGrid";
 
 function App() {
   const [page, setPage] = useState(1);
-  const [selectedUsers, setSelectedUsers] = useState(new Set());
   const [showSaved, setShowSaved] = useState(false);
   const totalPages = 2;
 
-  const { users, setUsers, setSavedUsers, savedUsers } = useUserContext();
+  const {
+    users,
+    setUsers,
+    setSavedUsers,
+    savedUsers,
+    selectedUsers,
+    setSelectedUsers,
+  } = useUserContext();
 
   const fetchUsers = async () => {
     try {
@@ -84,7 +90,7 @@ function App() {
               <th>First Name</th>
               <th>Last Name</th>
               <th>Email</th>
-              <th>Select</th>
+              <th>Saved</th>
             </tr>
           </thead>
           <tbody>

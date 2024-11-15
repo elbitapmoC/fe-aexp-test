@@ -115,3 +115,22 @@ button:focus-visible {
 .content-between {
   justify-content: space-between;
 }
+
+input[type="number"] {
+  width: 2.5rem;
+  padding: 0.5rem;
+  gap: 1rem;
+  font-size: 1rem;
+  &::-webkit-inner-spin-button {
+    transform: scale(1.25);
+  }
+}
+
+.w-full {
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
